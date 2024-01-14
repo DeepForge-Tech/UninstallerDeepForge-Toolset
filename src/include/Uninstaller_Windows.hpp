@@ -50,7 +50,7 @@ namespace Windows
         void RemoveFolder(string path)
         {
             string Command = "start powershell Remove-Item '" + ApplicationPath + "' -Recurse"; 
-            if (filesystem::exists(ApplicationPath))
+            if (filesystem::exists(ApplicationPath) == true)
             {
                 system(Command.c_str());
             }
