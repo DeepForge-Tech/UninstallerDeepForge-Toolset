@@ -1,4 +1,4 @@
-/*  The MIT License (MIT)
+/*  GNU GENERAL PUBLIC LICENSE
     ============================================================================
 
     ██████╗ ███████╗███████╗██████╗ ███████╗ ██████╗ ██████╗  ██████╗ ███████╗
@@ -26,47 +26,18 @@
     ============================================================================
 */
 #include <iostream>
-#include "Logger.cpp"
-#include "DatabaseConnect.hpp"
-#include <filesystem>
+#include "Logger.hpp"
 
-#define OS_NAME "Windows"
+#define OS_NAME "Linux"
 
 using namespace std;
-using namespace DB;
 
-namespace Windows
+namespace Linux
 {
     Logger logger;
-    Database database;
-    string DB_PATH = "C:\\ProgramData\\DeepForge\\UpdateManager\\AppInformation.db";
-    const string ApplicationPath = "C:\\ProgramData\\DeepForge\\DeepForge-Toolset";
-
     class Uninstaller
     {
-    public:
-        void UninstallApplication();
-    private:
-        void RemoveFolder(string path)
-        {
-            string Command = "start powershell Remove-Item 'C:\\ProgramData\\DeepForge\\DeepForge-Toolset' -Recurse"; 
-            // if (filesystem::exists(ApplicationPath))
-            // {
-            //     filesystem::remove_all(ApplicationPath);
-            // }
-            system(Command.c_str());
-        }
-        void RemoveAppInformation()
-        {
-            if (filesystem::exists(DB_PATH) == true)
-            {
-                database.open(&DB_PATH);
-                int result = database.ExistNameAppInTable("Applications","DeepForge-Toolset");
-                if (result == 0)
-                {
-                    database.RemoveApplicationFromTable("Applications","DeepForge-Toolset");
-                }
-            }
-        }
+        public:
+        private:
     };
 }
