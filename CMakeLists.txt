@@ -40,6 +40,7 @@ endif()
 
 #target_include_directories(Uninstaller PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/src/include)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/include)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/)
 
 set(SOURCE_FILES
   ./src/Uninstaller.cpp
