@@ -27,7 +27,7 @@
 */
 #include <iostream>
 #include "Logger.cpp"
-#include "DatabaseConnect.hpp"
+#include "../DatabaseConnect.hpp"
 #include <filesystem>
 
 #define OS_NAME "Windows"
