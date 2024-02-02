@@ -61,4 +61,4 @@
   
 
 ##  ℹ️ License
-[MIT LICENSE](LICENSE)
+[GPL-3.0 license](LICENSE)
