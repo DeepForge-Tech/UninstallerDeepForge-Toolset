@@ -30,12 +30,12 @@
 #include "../DatabaseConnect.hpp"
 #include <filesystem>
 
-#define OS_NAME "Linux"
+#define OS_NAME "macOS"
 
 using namespace std;
 using namespace DB;
 
-namespace Linux
+namespace macOS
 {
     Logger logger;
     Database database;
